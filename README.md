@@ -1,4 +1,5 @@
 1 – What is AWS? And understanding EC2.
+
 Get an overview of different Amazon Web Services (AWS), its core services, and global infrastructure. And create your AWS Free Tier account, secure it with best practices (MFA), and set billing alarms.
 Here you will learn the basics of launching and managing an AWS EC2 instance. It covers key concepts like instance types, security groups and SSH access. 
 
