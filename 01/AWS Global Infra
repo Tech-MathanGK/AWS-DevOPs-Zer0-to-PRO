@@ -1,1 +1,24 @@
+When you login into AWS Console and you can see Regions and Availability zones in the topright corner. There are 36 geographic regions and 114 Availability Zones (AZs) and 700+ ColudFront (CDN Edge caches) available as of 2025 all over the world. It may increase in future.Lets try to understand the purpose
 
+Regions
+
+In AWS, a Region is a specific geographical location that contains a group of isolated data centers. Each Region is completely independent to ensure the highest levels of fault tolerance and stability. 
+AWS has multiple Regions around the world, such as us-east-1 (North Virginia), ap-south-1 (Mumbai), and eu-west-1 (Ireland). When you deploy AWS services, you can choose the Region closest to your users to reduce latency and meet regulatory or compliance requirements related to data residency.
+
+Availability Zones
+
+Inside each Region, AWS has Availability Zones (AZs). An Availability Zone consists of one or more physically separated data centers, each with independent power, networking, and cooling. AZs within a Region are connected with fast, low-latency links, allowing you to design highly available applications by replicating them across multiple AZs. If one AZ experiences an issue, the others continue to operate, minimizing downtime.
+For example, when you launch an EC2 instance in the us-east-1 region, you can choose to deploy it in us-east-1a or us-east-1b Availability Zone. If you design your application to span across both AZs, even if us-east-1a faces an outage, your application running in us-east-1b remains available to users.
+
+Edge Locations
+
+Edge Locations are AWS data centers located globally for content delivery purposes. Used mainly by services like Amazon CloudFront (Content Delivery Network - CDN), AWS Global Accelerator, AWS Shield and Route 53
+Benefits of Edge Locations:
+Cache content closer to end-users to reduce latency.
+Improve performance for static and dynamic web content.
+Handle DNS queries faster through Amazon Route 53.
+
+In short:
+•	Regions help you choose the right location for performance, compliance, and cost.
+•	Availability Zones help you build fault-tolerant and highly available systems inside that Region.
+•	Edge Locations = Global content delivery points (CDN endpoints).
